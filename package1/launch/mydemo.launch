@@ -1,10 +1,10 @@
 <launch>
 
 
-  <arg name="map_file" value= "$(find turtlebot_navigation)/maps/playroom2.yaml" /> 
+  <arg name="map_file" value= "$(find turtlebot_navigation)/maps/THIS.yaml" /> 
 <!--node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" -->
 
- <node name="mapp_server" pkg="map_server" type="map_server" args="/home/turtlebot/catkin_ws/src/turtlebot_apps/turtlebot_navigation/maps/playroom2.yaml" />
+ <node name="mapp_server" pkg="map_server" type="map_server" args="/home/turtlebot/catkin_ws/src/turtlebot_apps/turtlebot_navigation/maps/THIS.yaml" />
  
 <include file="$(find turtlebot_bringup)/launch/minimal.launch" > </include>
 
@@ -16,8 +16,11 @@
   <node pkg="package1" name="MoveTBtoGoalPoints2" type="MoveTBtoGoalPoints2.py" output="screen">  -->
   </node> 
 <!--figure out a way to transition to follower from the MoveTBtoGoalPoints2.py -->
-<!--<include file="$(find turtlebot_follower)/launch/follower.launch">
+<!--<include file="$(find turtlebot_follower)/launch/follower.launch"> 
+<! <include file="$/home/turtlebot/catkin_ws/src/package1/MoveTBtoGoalPoints2.py"> </include> 
+<include file="$(find turtlebot_follower)/launch/follower.launch">
+</include>
+-->
 
- <! <include file="$/home/turtlebot/catkin_ws/src/package1/MoveTBtoGoalPoints2.py"> </include> -->
 
 </launch>
